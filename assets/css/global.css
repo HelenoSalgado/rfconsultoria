@@ -1,0 +1,37 @@
+:root{
+    --background-orange: #FF5722;
+    --background-black: #000;
+    --background-white: #fff;
+}
+html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(241, 241, 241);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(43, 42, 41);
+    border-radius: 20px;
+    border: 1px solid rgb(241, 241, 241);
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(43, 42, 41) rgb(241, 241, 241);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'YAEnS2G4JLg-0', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+a{
+    text-decoration: none;
+}
