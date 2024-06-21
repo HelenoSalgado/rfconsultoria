@@ -1,0 +1,83 @@
+:root{
+    --background-orange: #FF5722;
+    --color-white: #FFF;
+    --color-font: #131313;
+    --background-soft: #f7f7f7;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 1rem .8rem;
+    background-color: var(--background-orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo>img{
+    max-width: 30px;
+}
+.logo> h1{
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+.menu-header{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+.menu-header li{
+    list-style: none;
+}
+.menu-header li> a{
+   font-weight: 700;
+   color: var(--color-white);
+   text-decoration: none;
+}
+main{
+    padding: 0 1rem;
+}
+.mission-cards{
+    margin: 5rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.mission-cards-card{
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    column-gap: 2rem;
+    margin: 1rem 3rem;
+    padding-right: 1rem;
+    background-color: var(--background-soft);
+    border: 1px solid var(--background-orange);
+    border-radius: 7px;
+}
+.mission-cards-card > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-orange);
+    color: var(--color-white);
+    row-gap: .5rem;
+    padding: 0 1rem;
+    border-radius: 7px 0 0 7px;
+    height: 100%;
+}
+.mission-cards p{
+    color: var(--color-font);
+}
+.mission-cards-card h3{
+    margin: 0;
+}

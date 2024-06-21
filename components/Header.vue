@@ -1,31 +1,51 @@
 <template>
     <header>
-        <div class="logo">
-            <img src="/img/logo.png" alt="">
-            <h1>Rf Consultoria</h1>
-        </div>
-        <Menu />
+        <div class="logo-container">
+            <div class="logo">
+                <NuxtLink href="/">
+                    <img src="/img/logo.png" alt="logo">
+                </NuxtLink>
+            </div> 
+            <h1>RF Consultoria</h1>
+        </div> 
+        <Menu></Menu>
     </header>
 </template>
 <style scoped>
 header{
-    padding: 1rem .8rem;
-    background-color: var(--background-orange);
+    padding: .5rem .8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 2rem;
+    position: fixed;
+    width: 98.5%;
+    background-color: var(--bck-light);
+    z-index: 5;
+    border-bottom: .5px solid var(--color-border);
+    box-shadow: var(--shadow-elevation-low);
 }
-.logo{
-    display: flex;
-    flex-direction: column;
+.logo-container {
+    display: inline-flex;
     align-items: center;
-}
-.logo>img{
-    max-width: 30px;
-}
-.logo> h1{
-    font-size: .8rem;
-    text-transform: uppercase;
-    color: var(--background-white);
+    column-gap: 1rem;
+
+    & .logo {
+        background-color: var(--bck-primary);
+        padding: .7rem;
+        border: 1px solid var(--color-border);
+        border-radius: 50%;
+
+        & img {
+            max-width: 30px;
+        }
+
+
+    }
+
+    & h1 {
+        font-size: clamp(12px, 16px, 24px);
+        color: var(--color-primary);
+    }
 }
 </style>

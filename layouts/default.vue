@@ -4,5 +4,6 @@
         <div>
           <slot></slot>  
         </div>
+        <Footer></Footer>
     </div>
 </template>
