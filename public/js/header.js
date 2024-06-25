@@ -7,6 +7,11 @@ document.addEventListener('scroll', (e) => {
         indexTop = window.scrollY;;
     } else{
         header.style.top = '0';
+        // if(indexTop < 100){
+        //     header.style.backgroundColor = 'transparent';
+        // }else{
+        //     header.style.backgroundColor = 'var(--bck-light)';
+        // }
         indexTop = window.scrollY;;
     }
 });

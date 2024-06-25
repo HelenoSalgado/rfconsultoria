@@ -105,7 +105,6 @@ a{
     width: 100%;
     inset: 0;
     clip-path: inset(0);
-    filter: opacity(.6) brightness(70%) contrast(130%) saturate(150%);
     overflow: hidden;
     z-index: -1;
 
@@ -115,21 +114,9 @@ a{
        object-fit: cover;
        position: fixed;
        inset: 0;
+       filter: opacity(.6) brightness(70%) contrast(130%) saturate(150%);
     }
 }
-/* .background-fixed-image::before{
-    position: absolute;
-    top: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background:
-        linear-gradient(-190deg, #4323fab4, transparent 70.71%),
-        linear-gradient(300deg, var(--bck-primary), #ff48003f 70.71%),
-        linear-gradient(360deg, var(--bck-primary), transparent 70.71%);
-    background-blend-mode: luminosity;
-    z-index: 2;
-} */
 .button-whatsapp{
  
     position: fixed;

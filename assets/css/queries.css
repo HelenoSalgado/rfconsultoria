@@ -36,6 +36,7 @@
             border-radius: 5px;
             transition: 500ms ease-in;
         }
+
     }
 
     .animation-hamburger{
@@ -45,7 +46,8 @@
         }
     
         & span:nth-child(2){
-            width: 0;
+            opacity: 0;
+            transform: translateY(-10px);
         }
     
         & span:nth-child(3){
@@ -58,4 +60,11 @@
     .active-menu{
         right: 0;
     }
+
+    /* .slides-container{
+    
+        & .message{
+          top: 52%;
+        }
+    } */
 }

@@ -13,19 +13,18 @@
 </template>
 <style scoped>
 header{
-    position: relative;
-    padding: .5rem .8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 2rem;
     position: fixed;
-    width: 98.5%;
+    width: 100%;
     background-color: var(--bck-light);
     z-index: 5;
     transition: var(--transition);
 }
 .logo-container {
+    padding: .3rem .5rem;
     display: inline-flex;
     align-items: center;
     column-gap: 1rem;

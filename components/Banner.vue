@@ -21,7 +21,7 @@
 .slides-container{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 7rem);
     background-image: var(--bck-gradient);
     background-blend-mode: luminosity;
     z-index: -1;
@@ -30,7 +30,7 @@
         width: calc(100% - 3rem);
         color: var(--color-light);
         position: absolute;
-        top: calc(50% - 60px);
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;

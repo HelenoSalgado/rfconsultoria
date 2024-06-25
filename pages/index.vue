@@ -63,12 +63,9 @@ useHead({
     <LazyIconsWaverSup class="pre-footer-divider" />
 </template>
 <style scoped>
-.banner-header{
-    top: 3rem;
-}
 .waver-divider-header{
     position: relative;
-    margin-top: -7rem;
+    margin-top: -10rem;
     fill: #fff;
     z-index: 1;
 }
@@ -196,11 +193,11 @@ useHead({
                    filter: drop-shadow(1px 1px 1px var(--bck-destaque)) saturate(120%);
                }
 
-               /* & div{
+               & div{
                   & ::after{
                     width: 100%;
                   }
-               } */
+               }
             }
         }
         & .card::before{

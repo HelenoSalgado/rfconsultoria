@@ -6,13 +6,12 @@
         <li><a href="#">Nossos Objetivos</a></li>
         <li><a href="#">Serviços</a></li>
         <li><a href="#">Blog</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Fale Conosco</a></li>
        </ul>
     </nav>
 </template>
 <style scoped>
 .menu-header {
+    padding: .3rem 1rem;
 
     & ul {
         display: flex;
