@@ -2,7 +2,7 @@
     --bck-destaque: #4323fa;
     --bck-destaque-transparent: #4323fa69;
     --bck-primary: #FF5722;
-    --bck-primary-transparent: #ff562263;
+    --bck-primary-transparent: #ff56224b;
     --bck-secondary: #000;
     --bck-shadow: #ebecec;
     --color-primary: #FF5722;
@@ -16,14 +16,42 @@
     --bck-destaque-hover: var(--bck-primary);
     --color-primary-hover: var(--bck-destaque);
     --border-radius: 15px;
+    --bck-gradient: 
+        linear-gradient(-190deg, #4323fa, #ff56228e 70.71%),
+        linear-gradient(300deg, var(--bck-primary), #ff48005e 70.71%),
+        linear-gradient(360deg, var(--bck-primary), #ff480048 70.71%);
+    --transition: 200ms all;
 }
 
 :root{
     --shadow-color: 0deg 100% 5%;
-    --shadow-elevation-low:
-      0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
-      0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
-      3px 5px 6.5px -1.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-low: #6418008e 0px 8px 30px -10px;
+      /* 0.2px .7px 5px hsl(var(--shadow-color) / 0.34),
+      0.2px .5px 5px -1px hsl(var(--shadow-color) / 0.34),
+      1px 5px 8px -1.5px hsl(var(--shadow-color) / 0.34); */
+}
+
+@font-face {
+    font-family: "Inter";
+    src:
+    local("Inter"),
+    url("/fonts/inter/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+    local("Poppins"),
+    url("/fonts/poppins/Poppins-Light.ttf") format("truetype"),
+    url("/fonts/poppins/Poppins-Medium.ttf") format("truetype"),
+    url("/fonts/poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src:
+    local("Rubik"),
+    url("/fonts/rubik/Rubik-VariableFont_wght.ttf") format("truetype");
 }
 
 html {
@@ -52,18 +80,21 @@ body {
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: 'YAEnS2G4JLg-0', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-synthesis: none;
-    font-kerning: none;
-    font-feature-settings: "kern" 0, "calt" 0, "liga" 0, "clig" 0, "dlig" 0, "hlig" 0;
-    text-rendering: geometricprecision;
     background-color: #ffffff;
+    font-variant-ligatures: contextual;
+}
+h1,h2,h3{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+p,label,button,::before{
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 main{
     padding: 1rem;
 }
 a{
     text-decoration: none;
+    font-family: 'Rubik';
 }
 .waver-divider-body{
     fill: var(--bck-shadow);
@@ -74,8 +105,9 @@ a{
     width: 100%;
     inset: 0;
     clip-path: inset(0);
-    z-index: -1;
+    filter: opacity(.6) brightness(70%) contrast(130%) saturate(150%);
     overflow: hidden;
+    z-index: -1;
 
     & img {
        min-width: 100%;
@@ -85,18 +117,19 @@ a{
        inset: 0;
     }
 }
-.background-fixed-image::before{
+/* .background-fixed-image::before{
     position: absolute;
     top: 0;
     content: '';
     width: 100%;
     height: 100%;
     background:
-        linear-gradient(-190deg,#4323fa8f, transparent 70.71%),
-        linear-gradient(300deg, var(--bck-primary), transparent 70.71%),
+        linear-gradient(-190deg, #4323fab4, transparent 70.71%),
+        linear-gradient(300deg, var(--bck-primary), #ff48003f 70.71%),
         linear-gradient(360deg, var(--bck-primary), transparent 70.71%);
+    background-blend-mode: luminosity;
     z-index: 2;
-}
+} */
 .button-whatsapp{
  
     position: fixed;
@@ -109,7 +142,8 @@ a{
     & svg{
         width: 60px;
         height: 60px;
-        filter: drop-shadow(var(--shadow-elevation-low));
+        stroke: var(--bck-primary);
+        transition: 200ms ease-in;
     }
 }
 
@@ -119,12 +153,13 @@ a{
     right: -100px;
     opacity: 0;
     transform: translate(-50%);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     content: 'Envie-me uma mensagem';
-    min-width: 12rem;
+    width: max-content;
     padding: 20px;
     background-color: var(--bck-shadow);
     box-shadow: var(--shadow-elevation-low);
+    border: 4px double var(--color-primary);
     border-radius: 15px;
     transition: 200ms ease-in;
     z-index: -1;
@@ -133,7 +168,7 @@ a{
 .button-whatsapp:hover{
     
     & svg{
-        stroke: var(--color-secondary);;
+        transform: rotate(30deg);
     }
 }
 

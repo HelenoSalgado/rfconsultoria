@@ -13,6 +13,7 @@
 </template>
 <style scoped>
 header{
+    position: relative;
     padding: .5rem .8rem;
     display: flex;
     align-items: center;
@@ -22,8 +23,7 @@ header{
     width: 98.5%;
     background-color: var(--bck-light);
     z-index: 5;
-    border-bottom: .5px solid var(--color-border);
-    box-shadow: var(--shadow-elevation-low);
+    transition: var(--transition);
 }
 .logo-container {
     display: inline-flex;
@@ -32,7 +32,7 @@ header{
 
     & .logo {
         background-color: var(--bck-primary);
-        padding: .7rem;
+        padding: .5rem;
         border: 1px solid var(--color-border);
         border-radius: 50%;
 

@@ -2,7 +2,7 @@
 <section class="contact-container">
         <h2>Contato</h2>
         <form action="">
-            <label for="email">Email:</label>
+            <label for="email">Seu email:</label>
             <input type="email" name="" id="email">
             <label for="name">Nome completo:</label>
             <input type="text" name="" id="name">
@@ -11,7 +11,7 @@
             <button type="submit">Enviar</button>
         </form>
         <div class="background-fixed-image">
-            <NuxtImg src="/img/united.webp"></NuxtImg>
+            <NuxtImg src="/img/finance.jpg"></NuxtImg>
         </div>
     </section>
 </template>
@@ -20,18 +20,19 @@
     position: relative;
     margin-top: -15rem;
     padding: 10rem 1rem;
+    background-image: var(--bck-gradient);
+    background-blend-mode: luminosity;
+    z-index: 1;
 
     h2{
         text-align: center;
         font-size: 1.8rem;
-        color: var(--color-primary);
-        background-color: #ffffff8c;
+        color: var(--color-light);
         width: fit-content;
         padding: .7rem 2rem;
         margin: 2rem auto 5rem auto;
-        border:  1px solid var(--color-border);
+        text-shadow:  2px 1px 3px var(--bck-primary);
         border-radius: var(--border-radius);
-        box-shadow: .5px 2px 2px var(--color-primary);
     }
 
     & form{
@@ -41,10 +42,11 @@
         row-gap: 1rem;
         max-width: 800px;
         margin: 2rem auto;
-        background-color: rgba(0, 0, 255, 0.548);
+        background-color: #ffffff2d;
+        backdrop-filter: blur(4px);
         padding: 3rem 1rem 4rem 1rem;
         border-radius: var(--border-radius);
-        box-shadow: .5px 2px 2px var(--color-primary);
+        box-shadow: var(--shadow-elevation-low);
 
         & label, button{
             margin-top: .5rem;
@@ -62,6 +64,7 @@
 
         & input:focus, textarea:focus{
             outline-color: var(--bck-primary);
+            box-shadow: var(--shadow-elevation-low);
         }
 
         & textarea{
@@ -70,7 +73,7 @@
         }
 
         & button{
-            padding: .8rem 2rem;
+            height: 50px;
             border: none;
             border-radius: 15px;
             font-weight: bold;
@@ -84,7 +87,8 @@
         & button:hover{
             background-color: var(--bck-destaque);
             color: var(--color-light);
-            box-shadow: 1px 3px 15px var(--bck-light);
+            box-shadow: var(--shadow-elevation-low);
+            border: 1px solid var(--color-light);
         }
     }
 

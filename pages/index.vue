@@ -1,3 +1,14 @@
+<script lang="ts" setup>
+useHead({
+    script: [
+        {
+            src: '/js/header.js',
+            defer: 'true',
+            type: 'text/javascript'
+        }
+    ]
+})
+</script>
 <template>
     <Banner class="banner-header" />
     <IconsWaverSup class="waver-divider-header" />
@@ -16,81 +27,35 @@
     <IconsWaverSup />
     <section class="values-container">
         <h2>Nossos Valores</h2>
-        <div>
+        <div class="values-container-grid">
             <div class="card">
-                <NuxtImg src="/img/mission.png"></NuxtImg>
+                <NuxtImg src="/img/mission-image.jpg"></NuxtImg>
                 <div>
                     <h3>MISSÃO</h3>
                     <p>Ajudar nossos clientes a prosperarem, fornecendo soluções e orientação estratégica.</p>
                 </div>
             </div>
             <div class="card">
-                <NuxtImg src="/img/vision.png"></NuxtImg>
+                <NuxtImg src="/img/vision.jpg"></NuxtImg>
                 <div>
                     <h3>VISÃO</h3>
                     <p>Tornar-se referência nacional em consultoria empresarial.</p>
                 </div>
             </div>
             <div class="card">
-                <NuxtImg src="/img/united.webp"></NuxtImg>
+                <NuxtImg src="/img/book-pages-pixabay.jpg"></NuxtImg>
                 <div>
-                    <h3>VALORES</h3> <br>
-                    <p>
-                        Integridade; <br>
-                        Lealdade; <br>
-                        Inovação; <br>
-                        Foco no cliente; <br>
-                        Responsabilidade Social; <br>
-                        Sustentabilidade; <br>
-                        Desenvolvimento Profissional.
-                    </p>
+                    <h3>VALORES</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam itaque autem repudiandae vero natus cum dicta blanditiis.</p>
                 </div>
             </div>
         </div>
     </section>
     <IconsWaves />
-    <section class="services-container">
-        <h2>Nossos Serviços</h2>
-        <div>
-            <div class="card">
-                <NuxtImg src="/img/united.webp"></NuxtImg>
-                <div>
-                    <h3>PLANEJAMENTO ORÇAMENTÁRIO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur assumenda libero ab
-                        incorporis.</p>
-                </div>
-            </div>
-            <div class="card">
-                <NuxtImg src="/img/united.webp"></NuxtImg>
-                <div>
-                    <h3>PROCESSOS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur assumenda libero ab
-                        incorporis.</p>
-                </div>
-            </div>
-            <div class="card">
-                <NuxtImg src="/img/united.webp"></NuxtImg>
-                <div>
-                    <h3>ORÇAMENTO PESSOAL</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur assumenda libero ab
-                        incorporis.</p>
-                </div>
-            </div>
-            <div class="card">
-                <NuxtImg src="/img/united.webp"></NuxtImg>
-                <div>
-                    <h3>FISCAL E TRIBUTÁRIO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur assumenda libero ab
-                        incorporis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
     <IconsWaverSup />
     <section class="partner-container">
         <h3>Seja nosso parceiro</h3>
-        <p>Se você está procurando uma empresa de consultoria empresarial que possa ajudá-lo a alcançar o sucesso, entre
-            em contato conosco. Será um prazer conhecê-lo e discutir como podemos ajudá-lo a alcançar seus objetivos.
+        <p>Se você está procurando uma empresa de consultoria empresarial que possa ajudá-lo a alcançar o sucesso, entre em contato conosco. Será um prazer conhecê-lo e discutir como podemos ajudá-lo a alcançar seus objetivos.
         </p>
     </section>
     <LazyIconsWaves class="contact-divider" />
@@ -147,13 +112,12 @@
         max-width: 500px;
         border-radius: var(--border-radius);
         overflow: hidden;
-        border: 1px solid var(--color-border);
+        border: 4px double var(--bck-primary);
         box-shadow: var(--shadow-elevation-low);
 
         & img{
             width: 100%;
             border-radius: var(--border-radius);
-            height: 100%;
             transition: 200ms ease-in;
         }
         & img:hover{
@@ -177,52 +141,78 @@
         color: var(--color-primary);
     }
 
-    & div:nth-child(2){
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+    & .values-container-grid{
+        display: grid;
+        /* grid-template-columns: minmax(250px, 1fr) minmax(250px, 1.5fr) minmax(250px, 1fr); */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 2rem;
         max-width: 1200px;
         margin: auto;
 
         & .card{
             position: relative;
-            flex: 1 0 300px;
             height: 400px;
-            background:
-                linear-gradient(-190deg, #4323fa, #4323fa33 70.71%),
-                linear-gradient(200deg, var(--bck-primary), #fe5522e7 70.71%),
-                linear-gradient(360deg, var(--bck-primary), #fe5522e7 70.71%);
-            border: 1px solid var(--color-border);
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-elevation-low);
             overflow: hidden;
+            display: grid;
+            grid-template-rows: 200px 1fr;
+            transition: var(--transition);
+
+            & img{
+                width: 100%;
+                transition: var(--transition);
+                filter: opacity(.7);
+                z-index: 1;
+            }
 
             & div{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 90%;
-                transform: translate(-50%, -50%);
                 padding: 2rem 1rem;
-                color: var(--color-light);
+                color: var(--color-primary);
+                pointer-events: none;
+                background-color: var(--bck-light);
+                z-index: 1;
 
                 & p{
                     font-size: 1.1rem;
                 }
+
+                /* & ::after{
+                    position: absolute;
+                    top: 200px;
+                    left: 0;
+                    content: '';
+                    width: 0;
+                    height: 3px;
+                    background: linear-gradient(to right, var(--bck-primary), var(--bck-destaque));
+                    transition: var(--transition);
+                } */
             }
-            & img{
-                height: 100%;
-                transition: 200ms ease-in;
-                z-index: 0;
-                filter: brightness(50%);
+
+            &:hover{
+                box-shadow: var(--bck-destaque) 0px 8px 30px -10px;
+
+               & img{
+                   filter: drop-shadow(1px 1px 1px var(--bck-destaque)) saturate(120%);
+               }
+
+               /* & div{
+                  & ::after{
+                    width: 100%;
+                  }
+               } */
             }
         }
-        .card:hover{
-
-            & img{
-                filter: brightness(30%);
-            }
+        & .card::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 200px;
+            background: orangered;
+                /* linear-gradient(-190deg, #4323fa, #4323fa33 70.71%),
+                linear-gradient(200deg, var(--bck-primary), #fe5522e7 70.71%),
+                linear-gradient(360deg, var(--bck-primary), #fe5522e7 70.71%); */
+            background-blend-mode: luminosity;
         }
     }
 }
