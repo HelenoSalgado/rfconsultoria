@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "title": "MISSÃO",
+        "description": "Ajudar nossos clientes a prosperarem, fornecendo soluções e orientação estratégica.",
+        "src": "/img/mission-image.jpg"
+    },
+    {
+        "id": "2",
+        "title": "VISÃO",
+        "description": "Tornar-se referência nacional em consultoria empresarial.",
+        "src": "/img/vision.jpg"
+    },
+    {
+        "id": "3",
+        "title": "VALORES",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam itaqu eautem repudiandae vero natus cum dicta blanditiis.",
+        "src": "/img/book-pages-pixabay.jpg"
+    }
+]

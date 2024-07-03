@@ -1,2 +1,9 @@
-@import url('global.css');
-@import url('queries.css');
+@import url('public/css/global.css');
+@import url('public/css/header.css');
+@import url('public/css/menu-header.css');
+@import url('public/css/home.css');
+@import url('public/css/banner.css');
+@import url('public/css/about.css');
+@import url('public/css/form-contact.css');
+@import url('public/css/footer.css');
+@import url('public/css/queries.css');

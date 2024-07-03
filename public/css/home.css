@@ -1,0 +1,109 @@
+/* Valores e Serviços */
+.values-container{
+    background-color: var(--bck-shadow);
+}
+.values-container {
+    & .container-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+        & .card {
+            & div{
+                color: var(--color-primary);
+                background-color: var(--bck-light);
+            }
+            & img{
+                filter: opacity(.7);
+            }
+            &:hover{
+               & img{
+                   filter: drop-shadow(1px 1px 1px var(--bck-destaque)) saturate(120%);
+               }
+            }
+        }
+    }
+}
+.services-container {
+    & .container-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+        & .card {
+            & div{
+                color: var(--color-light);
+                background-color: var(--bck-primary);
+                background-blend-mode: luminosity;
+                transition: var(--transition);
+            }
+            &:hover{
+               & div{
+                 color: var(--color-primary);
+                 background-color: var(--bck-light);
+                }
+
+               & img{
+                   filter: drop-shadow(1px 1px 1px var(--bck-destaque)) saturate(120%) opacity(.7);
+               }
+            }
+        }
+    }
+}
+.values-container, .services-container{
+    margin-top: -33px;
+    padding: 0 1rem 5rem 1rem;
+
+    & h2{
+        position: relative;
+        text-align: center;
+        font-size: 2rem;
+        width: fit-content;
+        margin: 0 auto 7rem auto;
+        color: var(--color-primary);
+    }
+
+    & .container-grid, .container-grid{
+        display: grid;
+        /* grid-template-columns: minmax(250px, 1fr) minmax(250px, 1.5fr) minmax(250px, 1fr); */
+        gap: 2rem;
+        max-width: 1200px;
+        margin: auto;
+
+        & .card{
+            position: relative;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-elevation-low);
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: 200px 1fr;
+            transition: var(--transition);
+
+            & img{
+                width: 100%;
+                height: auto;
+                min-height: 200px;
+                transition: var(--transition);
+                z-index: 1;
+            }
+
+            & div{
+                padding: 2rem 1rem;
+                pointer-events: none;
+                z-index: 1;
+
+                & p{
+                    font-size: 1.1rem;
+                }
+            }
+            &:hover{
+                box-shadow: var(--bck-destaque) 0px 8px 30px -10px;
+            }
+
+        }
+        & .card::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 200px;
+            background: orangered;
+            background-blend-mode: luminosity;
+        }
+    }
+}

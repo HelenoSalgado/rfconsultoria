@@ -1,11 +1,18 @@
 {
-  "name": "nuxt-app",
+  "name": "rf-consultoria",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "author": {
+    "name": "Heleno Salgado",
+    "url": "https://heleno.dev"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && bash remove-js-not-used dist && bash minify -r dist/css css",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

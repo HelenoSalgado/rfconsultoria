@@ -1,25 +1,77 @@
 .about-container{
-    margin: 5rem auto 1rem auto;
-    max-width: 1100px;
+    position: relative;
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     column-gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(background-soft);
-    border-radius: 15px;
+    color: var(--color-primary);
+    padding: 0 1rem;
+
+    div{
+        flex: 1 1 250px;
+    }
+
+    & div:first-child{
+        max-width: 500px;
+        align-self: center;
+
+        & a{
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            background-color: var(--bck-primary);
+            border-radius: 15px;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: var(--shadow-elevation-low);
+            transition: 200ms ease-in;
+        }
+        & a:hover{
+            background-color: var(--bck-primary-hover);
+            box-shadow: 1px 5px 15px var(--bck-destaque);
+        }
+    }
+
+    & div:last-child{
+        margin: 2rem 0;
+        max-width: 500px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        border: 4px double var(--bck-primary);
+        box-shadow: var(--shadow-elevation-low);
+
+        & img{
+            object-fit: cover;
+            height: 100%;
+            border-radius: var(--border-radius);
+            transition: 200ms ease-in;
+        }
+        & img:hover{
+            filter: brightness(120%);
+        }
+    }
 }
-.apresentation{
-    max-width: 500px;
-    text-align: justify;
-    padding-left: 2rem;
-    color: var(--color-font);
-}
-.apresentation-image{
-   max-width: 500px;
-   overflow: hidden;
-   border-radius: 0 15px 15px 0;
-}
-.apresentation-image img{
-    object-fit: cover;
-    display: block;
+.partner-container{
+    position: relative;
+    max-width: 100%;
+    margin: -50px auto 0 auto;
+    background-color: var(--bck-shadow);
+    color: var(--color-primary);
+    padding: 2rem 1rem 5rem 1rem;
+    z-index: 2;
+
+    & h3, p{
+        max-width: 600px;
+        margin: auto;
+    }
+
+    & h3{
+        color: var(--background-destaque);
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    & p {
+        line-height: 1.5rem;
+    }
 }

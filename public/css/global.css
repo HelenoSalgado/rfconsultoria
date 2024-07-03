@@ -1,83 +1,176 @@
 :root{
-    --background-orange: #FF5722;
-    --color-white: #FFF;
-    --color-font: #131313;
-    --background-soft: #f7f7f7;
+    --bck-destaque: #4323fa;
+    --bck-destaque-transparent: #4323fa69;
+    --bck-primary: #FF5722;
+    --bck-primary-transparent: #ff56224b;
+    --bck-secondary: #000;
+    --bck-shadow: #ebecec;
+    --color-primary: #FF5722;
+    --color-secondary: #4323fa;
+    --bck-light: #fff;
+    --color-light: #fff;
+    --color-dark: #000;
+    --filter-gradient: #0000008f, #ff56228e;
+    --color-border: var(--bck-destaque);
+    --bck-primary-hover: var(--bck-destaque);
+    --bck-destaque-hover: var(--bck-primary);
+    --color-primary-hover: var(--bck-destaque);
+    --border-radius: 15px;
+    --bck-gradient: 
+        linear-gradient(-190deg, #4323fab0, #ff56225d 70.71%),
+        linear-gradient(300deg, #ff480079, #ff480046 70.71%),
+        linear-gradient(360deg, #ff480079, #ff480031 70.71%);
+    --transition: 200ms all;
 }
 
-html, body{
+:root{
+    --shadow-color: 0deg 100% 5%;
+    --shadow-elevation-low: #6418008e 0px 8px 30px -10px;
+      /* 0.2px .7px 5px hsl(var(--shadow-color) / 0.34),
+      0.2px .5px 5px -1px hsl(var(--shadow-color) / 0.34),
+      1px 5px 8px -1.5px hsl(var(--shadow-color) / 0.34); */
+}
+
+@font-face {
+    font-family: "Inter";
+    src:
+    local("Inter"),
+    url("/fonts/inter/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+    local("Poppins"),
+    url("/fonts/poppins/Poppins-Light.ttf") format("truetype"),
+    url("/fonts/poppins/Poppins-Medium.ttf") format("truetype"),
+    url("/fonts/poppins/Poppins-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src:
+    local("Rubik"),
+    url("/fonts/rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
+}
+
+html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bck-shadow);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bck-primary);
+    border-radius: 15px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bck-primary);
+    position: relative;
     margin: 0;
     padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-variant-ligatures: contextual;
 }
-
-header{
-    padding: 1rem .8rem;
-    background-color: var(--background-orange);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+h1,h2,h3{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
-.logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.logo>img{
-    max-width: 30px;
-}
-.logo> h1{
-    font-size: .8rem;
-    text-transform: uppercase;
-    color: var(--color-white);
-}
-.menu-header{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-}
-.menu-header li{
-    list-style: none;
-}
-.menu-header li> a{
-   font-weight: 700;
-   color: var(--color-white);
-   text-decoration: none;
+p,label,button,::before{
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 main{
-    padding: 0 1rem;
+    padding: 1rem;
 }
-.mission-cards{
-    margin: 5rem 0;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+a{
+    text-decoration: none;
+    font-family: 'Rubik';
 }
-.mission-cards-card{
-    display: flex;
-    align-items: center;
-    max-width: 400px;
-    column-gap: 2rem;
-    margin: 1rem 3rem;
-    padding-right: 1rem;
-    background-color: var(--background-soft);
-    border: 1px solid var(--background-orange);
-    border-radius: 7px;
-}
-.mission-cards-card > div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--background-orange);
-    color: var(--color-white);
-    row-gap: .5rem;
-    padding: 0 1rem;
-    border-radius: 7px 0 0 7px;
+.background-fixed-image {
+    position: absolute;
     height: 100%;
+    width: 100%;
+    inset: 0;
+    clip-path: inset(0);
+    overflow: hidden;
+    z-index: -1;
+
+    & img {
+       min-width: 100%;
+       height: 100%;
+       object-fit: cover;
+       position: fixed;
+       inset: 0;
+       filter: opacity(.6) brightness(70%) contrast(130%) saturate(150%);
+    }
 }
-.mission-cards p{
-    color: var(--color-font);
+.button-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 2;
+    cursor: pointer;
+    transition: 200ms ease-in;
+
+    & svg{
+        width: 60px;
+        height: 60px;
+        stroke: var(--bck-primary);
+        transition: 200ms ease-in;
+    }
 }
-.mission-cards-card h3{
-    margin: 0;
+
+.button-whatsapp::before{
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    color: var(--color-primary);
+    content: 'Envie-me uma mensagem';
+    width: max-content;
+    padding: 20px;
+    background-color: var(--bck-shadow);
+    box-shadow: var(--shadow-elevation-low);
+    border: 4px double var(--color-primary);
+    border-radius: 15px;
+    transition: 200ms ease-in;
+    z-index: -1;
+}
+
+.button-whatsapp:hover{
+    
+    & svg{
+        transform: rotate(30deg);
+    }
+}
+
+.button-whatsapp:hover::before{
+    right: -50px;
+    opacity: 10;
+}
+
+.social-media {
+    display: inline-flex;
+    column-gap: 1rem;
+
+    & svg {
+        width: 30px;
+        height: 30px;
+        fill: var(--bck-primary);
+        stroke: var(--color-light);
+    }
 }

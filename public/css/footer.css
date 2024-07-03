@@ -1,0 +1,37 @@
+footer {
+    color: var(--color-primary);
+
+    & .info-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        padding: 2rem 1rem 4rem 1rem;
+
+        & div {
+            flex-basis: 300px;
+
+            & .contact {
+
+                & a {
+                    display: flex;
+                    margin: .5rem 0;
+                    align-items: center;
+                    gap: .5rem;
+                    color: var(--color-primary);
+
+                    & svg {
+                        width: 27px;
+                        height: 27px;
+                        fill: var(--bck-primary);
+                        stroke: var(--color-light);
+                    }
+                }
+            }
+        }
+    }
+
+    .copy-writer {
+        text-align: center;
+    }
+}
