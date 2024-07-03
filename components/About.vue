@@ -7,6 +7,6 @@
         <a href="">Faça um diagnóstico</a>
     </div>
     <div>
-        <NuxtImg src="/img/rogerio-about.webp" alt="Rogério, fundador da empresa."></NuxtImg>
+        <NuxtImg width="600px" height="400px" src="/img/rogerio-about.webp" alt="Rogério, fundador da empresa."></NuxtImg>
     </div>
 </template>

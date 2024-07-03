@@ -22,8 +22,9 @@ export default defineNuxtConfig({
       ]
     },
   },
-
-  //css: ['@/assets/css/main.css'],
+  $development: {
+    css: ['@/assets/css/main.css'],
+  },
   modules: ["@nuxt/image"],
 
   image: {

@@ -21,11 +21,6 @@ header{
         border: 1px solid var(--color-border);
         border-radius: 50%;
 
-        & img {
-            max-width: 30px;
-        }
-
-
     }
 
     & h1 {
