@@ -15,38 +15,38 @@
         <div class="background-fixed-image">
             <NuxtImg sizes="xs:320px, sm:640px, md:768px, lg:1024px, xl:1280px" src="/img/finance.jpg" width="1200" height="auto" alt="Reunião de Negócio"/>
         </div>
+        <DivisionTop fill="var(--bck-light)"/>
     </div>
 </template>
 <style scoped>
 .slides-container{
+    padding-top: 65px;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
-    height: calc(100vh + 7rem);
+    height: 100%;
     background-image: var(--bck-gradient);
     background-blend-mode: luminosity;
     z-index: -1;
 
     & .message{
-        width: calc(100% - 3rem);
         color: var(--color-light);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 1;
+        grid-column: 1;
+        grid-row: 2;
+        padding: .5rem;
+        max-width: 500px;
+        margin: auto;
 
         & h2{
             font-size: 2rem;
             text-shadow: .3px .5px .3px var(--bck-primary);
-            margin-bottom: 1rem;
         }
 
         & p{
             line-height: 1.3rem;
-            max-width: 500px;
             margin: auto;
-            margin-bottom: 3rem;
         }
 
         & a {
@@ -65,6 +65,11 @@
             background-color: var(--bck-destaque);
             color: var(--color-light);
         }
+    }
+
+    & svg{
+        grid-row: 4;
+        margin-bottom: -1px;
     }
 }
 </style>

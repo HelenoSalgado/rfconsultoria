@@ -1,4 +1,5 @@
 const header = document.querySelector('header');
+const hamburger = document.querySelector('.hamburger');
 let indexTop;
 
 document.addEventListener('scroll', (e) => {
@@ -7,18 +8,34 @@ document.addEventListener('scroll', (e) => {
         indexTop = window.scrollY;;
     } else{
         header.style.top = '0';
-        // if(indexTop < 100){
-        //     header.style.backgroundColor = 'transparent';
-        // }else{
-        //     header.style.backgroundColor = 'var(--bck-light)';
-        // }
         indexTop = window.scrollY;;
     }
 });
 
-const hamburger = document.querySelector('.hamburger');
-
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('animation-hamburger');
     document.querySelector('.menu-header').classList.toggle('active-menu');
-})
+});
+
+// Plus and Minus list card
+let listExtend = document.querySelector('.list-extend');
+let menuCard = document.querySelector('.menu-card');
+let width = window.visualViewport.width;
+
+listExtend.addEventListener('mouseenter', () => {
+    if(width > 750) menuCard.classList.toggle('menu-card-show');
+});
+listExtend.addEventListener('mouseleave', () => {
+    if(width > 750) menuCard.classList.toggle('menu-card-show');
+});
+
+listExtend.addEventListener('click', () => {
+    if(width < 750){
+        menuCard.classList.toggle('menu-card-show');
+        if(menuCard.classList.toggle(true)){
+            document.querySelector('.plus').style.opacity = '0';
+        }else{
+            document.querySelector('.plus').style.opacity = '10';
+        }
+    }
+});

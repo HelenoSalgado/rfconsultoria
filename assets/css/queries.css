@@ -1,12 +1,12 @@
 @media (width < 750px) {
     .menu-header {
         position: absolute;
-        top: 0;
+        top: 62px;
         right: -340px;
         min-width: 300px;
         height: 100vh;
         padding: 5rem 1rem;
-        background-color: var(--bck-shadow); 
+        background-color: var(--bck-light); 
         transition: 500ms ease-in;
     
             & ul {
@@ -16,6 +16,10 @@
                 
                 & li {
                     width: fit-content;
+
+                    & a{
+                        font-size: 1.2rem;
+                    }
                 }
             }
 
@@ -61,10 +65,7 @@
         right: 0;
     }
 
-    /* .slides-container{
-    
-        & .message{
-          top: 52%;
-        }
-    } */
+    .slides-container{
+        margin-top: -3rem;
+    }
 }

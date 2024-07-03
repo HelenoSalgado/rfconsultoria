@@ -10,24 +10,21 @@ useHead({
 })
 </script>
 <template>
-    <Banner class="banner-header" />
-    <IconsWaverSup class="waver-divider-header" />
-    <section class="call-container">
+    <Banner />
+    <section class="call-container" id="about">
         <div>
             <h2>Tenha o melhor serviço de consultoria</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione eius ab iste, aliquid porro vero
-                accusantium nobis quisquam voluptatibus deserunt obcaecati doloremque facilis corporis expedita
-                excepturi placeat quaerat odio voluptatum.</p>
+            <p>Somos a RF Consultoria, uma empresa fundada por Rogério, com a visão de ajudar os seus clientes a prosperarem. Estamos comprometidos em oferecer soluções estratégicas de consultoria empresarial que ajudem nossos clientes a alcançar seus objetivos.</p>
             <a href="">Faça um diagnóstico</a>
         </div>
         <div>
             <NuxtImg src="/img/rogerio-about.webp"></NuxtImg>
         </div>
     </section>
-    <IconsWaverSup />
+    <DivisionTop fill="var(--bck-shadow)"/>
     <section class="values-container">
         <h2>Nossos Valores</h2>
-        <div class="values-container-grid">
+        <div class="container-grid">
             <div class="card">
                 <NuxtImg src="/img/mission-image.jpg"></NuxtImg>
                 <div>
@@ -51,24 +48,51 @@ useHead({
             </div>
         </div>
     </section>
-    <IconsWaves />
-    <IconsWaverSup />
+    <DivisionBottom fill="var(--bck-shadow)"/>
+    <section class="services-container" id="services">
+        <h2>Nossos Serviços</h2>
+        <div class="container-grid">
+            <div class="card">
+                <NuxtImg src="/img/mission-image.jpg"></NuxtImg>
+                <div>
+                    <h3>Planejamento Orçamentário</h3>
+                    <p>Ajudar nossos clientes a prosperarem, fornecendo soluções e orientação estratégica.</p>
+                </div>
+            </div>
+            <div class="card">
+                <NuxtImg src="/img/vision.jpg"></NuxtImg>
+                <div>
+                    <h3>Processos</h3>
+                    <p>Tornar-se referência nacional em consultoria empresarial.</p>
+                </div>
+            </div>
+            <div class="card">
+                <NuxtImg src="/img/book-pages-pixabay.jpg"></NuxtImg>
+                <div>
+                    <h3>Orçamento Pessoal</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam itaque autem repudiandae vero natus cum dicta blanditiis.</p>
+                </div>
+            </div>
+            <div class="card">
+                <NuxtImg src="/img/book-pages-pixabay.jpg"></NuxtImg>
+                <div>
+                    <h3>Fiscal e Tributário</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam itaque autem repudiandae vero natus cum dicta blanditiis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <LazyDivisionTop fill="var(--bck-shadow)"/>
     <section class="partner-container">
         <h3>Seja nosso parceiro</h3>
         <p>Se você está procurando uma empresa de consultoria empresarial que possa ajudá-lo a alcançar o sucesso, entre em contato conosco. Será um prazer conhecê-lo e discutir como podemos ajudá-lo a alcançar seus objetivos.
         </p>
     </section>
-    <LazyIconsWaves class="contact-divider" />
+    <LazyDivisionBottom fill="var(--bck-shadow)" style="position: relative; z-index: 2;"/>
     <FormContact />
-    <LazyIconsWaverSup class="pre-footer-divider" />
+    <LazyDivisionTop fill="var(--bck-light)" style="position: relative; z-index: 2; margin-top: -10rem"/>
 </template>
 <style scoped>
-.waver-divider-header{
-    position: relative;
-    margin-top: -10rem;
-    fill: #fff;
-    z-index: 1;
-}
 .call-container{
     position: relative;
     display: flex;
@@ -77,7 +101,6 @@ useHead({
     column-gap: 2rem;
     color: var(--color-primary);
     padding: 0 1rem;
-    z-index: 2;
 
     div{
         flex: 1 1 250px;
@@ -113,7 +136,8 @@ useHead({
         box-shadow: var(--shadow-elevation-low);
 
         & img{
-            width: 100%;
+            object-fit: cover;
+            height: 100%;
             border-radius: var(--border-radius);
             transition: 200ms ease-in;
         }
@@ -124,6 +148,50 @@ useHead({
 }
 .values-container{
     background-color: var(--bck-shadow);
+}
+.values-container {
+    & .container-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+        & .card {
+            & div{
+                color: var(--color-primary);
+                background-color: var(--bck-light);
+            }
+            & img{
+                filter: opacity(.7);
+            }
+            &:hover{
+               & img{
+                   filter: drop-shadow(1px 1px 1px var(--bck-destaque)) saturate(120%);
+               }
+            }
+        }
+    }
+}
+.services-container {
+    & .container-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+        & .card {
+            & div{
+                color: var(--color-light);
+                background-color: var(--bck-primary);
+                background-blend-mode: luminosity;
+                transition: var(--transition);
+            }
+            &:hover{
+               & div{
+                 color: var(--color-primary);
+                 background-color: var(--bck-light);
+                }
+
+               & img{
+                   filter: drop-shadow(1px 1px 1px var(--bck-destaque)) saturate(120%) opacity(.7);
+               }
+            }
+        }
+    }
 }
 .values-container, .services-container{
     margin-top: -33px;
@@ -138,17 +206,15 @@ useHead({
         color: var(--color-primary);
     }
 
-    & .values-container-grid{
+    & .container-grid, .container-grid{
         display: grid;
         /* grid-template-columns: minmax(250px, 1fr) minmax(250px, 1.5fr) minmax(250px, 1fr); */
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 2rem;
         max-width: 1200px;
         margin: auto;
 
         & .card{
             position: relative;
-            height: 400px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-elevation-low);
             overflow: hidden;
@@ -158,47 +224,25 @@ useHead({
 
             & img{
                 width: 100%;
+                height: auto;
+                min-height: 200px;
                 transition: var(--transition);
-                filter: opacity(.7);
                 z-index: 1;
             }
 
             & div{
                 padding: 2rem 1rem;
-                color: var(--color-primary);
                 pointer-events: none;
-                background-color: var(--bck-light);
                 z-index: 1;
 
                 & p{
                     font-size: 1.1rem;
                 }
-
-                /* & ::after{
-                    position: absolute;
-                    top: 200px;
-                    left: 0;
-                    content: '';
-                    width: 0;
-                    height: 3px;
-                    background: linear-gradient(to right, var(--bck-primary), var(--bck-destaque));
-                    transition: var(--transition);
-                } */
             }
-
             &:hover{
                 box-shadow: var(--bck-destaque) 0px 8px 30px -10px;
-
-               & img{
-                   filter: drop-shadow(1px 1px 1px var(--bck-destaque)) saturate(120%);
-               }
-
-               & div{
-                  & ::after{
-                    width: 100%;
-                  }
-               }
             }
+
         }
         & .card::before{
             position: absolute;
@@ -206,9 +250,6 @@ useHead({
             width: 100%;
             height: 200px;
             background: orangered;
-                /* linear-gradient(-190deg, #4323fa, #4323fa33 70.71%),
-                linear-gradient(200deg, var(--bck-primary), #fe5522e7 70.71%),
-                linear-gradient(360deg, var(--bck-primary), #fe5522e7 70.71%); */
             background-blend-mode: luminosity;
         }
     }
@@ -235,24 +276,6 @@ useHead({
 
     & p {
         line-height: 1.5rem;
-    }
-}
-.contact-divider{
-    position: relative;
-    fill: var(--bck-shadow);
-    z-index: 2;
-}
-
-.pre-footer-divider{
-    position: relative;
-    margin-top: -10rem;
-    z-index: 2;
-    fill: #fff;
-}
-
-@media (min-width: 850px) {
-    .values-container, .services-container, .call-container{
-        margin-top: -5rem;
     }
 }
 </style>

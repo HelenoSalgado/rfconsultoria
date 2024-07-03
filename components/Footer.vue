@@ -17,17 +17,7 @@
         </div>
         <div>
             <h3>Redes Sociais</h3>
-            <div class="social-media">
-                <NuxtLink>
-                    <LazyIconsInstagram/>
-                </NuxtLink>
-                <NuxtLink>
-                   <LazyIconsLinkedin/>
-                </NuxtLink>
-                <NuxtLink>
-                    <LazyIconsYoutube/>
-                </NuxtLink>
-            </div>
+            <SocialMedia />
         </div>
         </div>
         <p class="copy-writer">© RF Consultoria - Todos os direitos reservados - 2023</p>
@@ -63,18 +53,6 @@ footer {
                         fill: var(--bck-primary);
                         stroke: var(--color-light);
                     }
-                }
-            }
-
-            & .social-media {
-                display: inline-flex;
-                column-gap: 1rem;
-
-                & svg {
-                    width: 30px;
-                    height: 30px;
-                    fill: var(--bck-primary);
-                    stroke: var(--color-light);
                 }
             }
         }

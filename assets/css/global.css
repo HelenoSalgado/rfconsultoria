@@ -17,9 +17,9 @@
     --color-primary-hover: var(--bck-destaque);
     --border-radius: 15px;
     --bck-gradient: 
-        linear-gradient(-190deg, #4323fa, #ff56228e 70.71%),
-        linear-gradient(300deg, var(--bck-primary), #ff48005e 70.71%),
-        linear-gradient(360deg, var(--bck-primary), #ff480048 70.71%);
+        linear-gradient(-190deg, #4323fab0, #ff56225d 70.71%),
+        linear-gradient(300deg, #ff480079, #ff480046 70.71%),
+        linear-gradient(360deg, #ff480079, #ff480031 70.71%);
     --transition: 200ms all;
 }
 
@@ -96,9 +96,6 @@ a{
     text-decoration: none;
     font-family: 'Rubik';
 }
-.waver-divider-body{
-    fill: var(--bck-shadow);
-}
 .background-fixed-image {
     position: absolute;
     height: 100%;
@@ -118,10 +115,9 @@ a{
     }
 }
 .button-whatsapp{
- 
     position: fixed;
-    top: 88vh;
-    right: 20px;
+    bottom: 20px;
+    right: 10px;
     z-index: 2;
     cursor: pointer;
     transition: 200ms ease-in;
@@ -136,10 +132,10 @@ a{
 
 .button-whatsapp::before{
     position: absolute;
-    top: 5px;
+    top: 50%;
     right: -100px;
     opacity: 0;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     color: var(--color-primary);
     content: 'Envie-me uma mensagem';
     width: max-content;
