@@ -39,3 +39,12 @@ listExtend.addEventListener('click', () => {
         }
     }
 });
+
+// Extend reponse in question
+document.querySelectorAll('.question-header').forEach((element, key) => {
+    element.addEventListener('click', () => {
+        document.querySelectorAll('.response')[key].classList.toggle('response-visible');
+        document.querySelectorAll('.question-plus')[key].classList.toggle('plus-hidden');
+        document.querySelectorAll('.question-minus')[key].classList.toggle('minus-visible');
+    })
+});

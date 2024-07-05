@@ -4,6 +4,7 @@ header{
     justify-content: space-between;
     column-gap: 2rem;
     position: fixed;
+    top: 0;
     width: 100%;
     background-color: var(--bck-light);
     z-index: 5;

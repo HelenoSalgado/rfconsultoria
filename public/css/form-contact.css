@@ -1,42 +1,42 @@
-.contact-container{
+.contact-container {
     position: relative;
-    margin-top: -15rem;
-    padding: 10rem 1rem;
-    background-image: var(--bck-gradient);
-    background-blend-mode: luminosity;
-    z-index: 1;
+    display: grid;
+    grid-template-columns: auto;
 
-    h2{
-        text-align: center;
-        font-size: 1.8rem;
+    & h2 {
+        font-size: 2rem;
         color: var(--color-light);
         width: fit-content;
         padding: .7rem 2rem;
-        margin: 2rem auto 5rem auto;
-        text-shadow:  2px 1px 3px var(--bck-primary);
+        margin: 0 auto 3rem auto;
+        text-shadow: 2px 1px 3px var(--bck-primary);
         border-radius: var(--border-radius);
     }
 
-    & form{
+    & form {
         display: grid;
         grid-template-columns: minmax(200px, 500px);
         justify-content: center;
         row-gap: 1rem;
-        max-width: 800px;
-        margin: 2rem auto;
+        max-width: 700px;
+        margin: 1rem auto;
         background-color: #ffffff2d;
         backdrop-filter: blur(4px);
-        padding: 3rem 1rem 4rem 1rem;
+        padding: 2rem 1rem;
+        width: calc(100% - 1rem);
         border-radius: var(--border-radius);
         box-shadow: var(--shadow-elevation-low);
+        box-sizing: border-box;
 
-        & label, button{
+        & label,
+        button {
             margin-top: .5rem;
             color: var(--color-light);
             font-size: 1.1rem;
         }
 
-        & input, textarea{
+        & input,
+        textarea {
             border: none;
             padding: .6rem;
             font-size: 1.2rem;
@@ -44,17 +44,18 @@
             transition: 200ms ease-in;
         }
 
-        & input:focus, textarea:focus{
+        & input:focus,
+        textarea:focus {
             outline-color: var(--bck-primary);
             box-shadow: var(--shadow-elevation-low);
         }
 
-        & textarea{
+        & textarea {
             min-height: 200px;
             max-height: 500px;
         }
 
-        & button{
+        & button {
             height: 50px;
             border: none;
             border-radius: 15px;
@@ -66,12 +67,16 @@
             cursor: pointer;
         }
 
-        & button:hover{
+        & button:hover {
             background-color: var(--bck-destaque);
             color: var(--color-light);
             box-shadow: var(--shadow-elevation-low);
             border: 1px solid var(--color-light);
         }
+    }
+
+    & svg:last-child{
+        margin-bottom: -3px;
     }
 
 }

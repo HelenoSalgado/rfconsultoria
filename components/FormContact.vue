@@ -10,8 +10,8 @@
             <textarea name="" id="message" rows="7"></textarea>
             <button type="submit">Enviar</button>
         </form>
-        <div class="background-fixed-image">
+        <!-- <div class="background-fixed-image">
             <NuxtImg format="webp" loading="lazy" src="/img/finance.jpg" alt="Escritório"></NuxtImg>
-        </div>
+        </div> -->
     </section>
 </template>

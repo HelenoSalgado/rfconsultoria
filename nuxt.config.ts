@@ -17,10 +17,16 @@ export default defineNuxtConfig({
       charset: 'UTF-8',
       htmlAttrs: { lang: 'pt-BR' },
       viewport: 'width=device-width, initial-scale=1',
-      link: [
-        { href: '/css/main.min.css', rel: 'stylesheet', type: 'text/css' }
-      ]
     },
+  },
+  $production: {
+    app: {
+      head: {
+        link: [
+          { href: '/css/main.min.css', rel: 'stylesheet', type: 'text/css' }
+        ]
+      }
+    }
   },
   $development: {
     css: ['@/assets/css/main.css'],
@@ -29,7 +35,5 @@ export default defineNuxtConfig({
 
   image: {
     format: ['webp'],
-  },
-
-  compatibilityDate: '2024-07-03'
+  }
 })

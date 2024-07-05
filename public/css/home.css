@@ -62,7 +62,8 @@
     & .container-grid, .container-grid{
         display: grid;
         /* grid-template-columns: minmax(250px, 1fr) minmax(250px, 1.5fr) minmax(250px, 1fr); */
-        gap: 2rem;
+        row-gap: 4rem;
+        column-gap: 2rem;
         max-width: 1200px;
         margin: auto;
 

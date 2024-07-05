@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import services from 'assets/json/services.json';
 import values from 'assets/json/values.json';
+import questions from 'assets/json/questions.json';
 useHead({
     script: [
         {
@@ -18,7 +19,13 @@ useSeoMeta({
 });
 </script>
 <template>
-    <Banner />
+    <section class="slides-container">
+       <Banner />
+       <div class="background-fixed-image">
+            <NuxtImg format="webp" src="/img/finance.jpg" width="1200" height="auto" alt="Reunião de Negócio"/>
+        </div>
+       <DivisionTop fill="var(--bck-light)"/>
+    </section>
     <section class="about-container" id="about">
         <About/>
     </section>
@@ -50,7 +57,22 @@ useSeoMeta({
         <p>Se você está procurando uma empresa de consultoria empresarial que possa ajudá-lo a alcançar o sucesso, entre em contato conosco. Será um prazer conhecê-lo e discutir como podemos ajudá-lo a alcançar seus objetivos.
         </p>
     </section>
-    <LazyDivisionBottom fill="var(--bck-shadow)" style="position: relative; z-index: 2;"/>
-    <FormContact />
-    <LazyDivisionTop fill="var(--bck-light)" style="position: relative; z-index: 2; margin-top: -10rem"/>
+    <LazyDivisionBottom fill="var(--bck-shadow)"/>
+    <section class="container-questions">
+        <h2>Perguntas Frequentes</h2>
+        <div>
+        <Question v-for="{ id, question, response } in questions" :key="id"
+         :question
+         :response
+        />
+       </div>
+    </section>
+    <section class="contact-container">
+       <LazyDivisionBottom fill="var(--bck-light)"/>
+        <FormContact />
+        <div class="background-fixed-image">
+           <NuxtImg format="webp" loading="lazy" src="/img/finance.jpg" alt="Escritório"></NuxtImg>
+        </div>
+       <LazyDivisionTop fill="var(--bck-light)"/>
+    </section>
 </template>
