@@ -16,6 +16,10 @@
         max-width: 500px;
         align-self: center;
 
+        & h2{
+            text-transform: uppercase;
+        }
+
         & a{
             display: inline-block;
             margin-top: 1rem;

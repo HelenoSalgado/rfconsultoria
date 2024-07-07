@@ -1,11 +1,11 @@
 :root{
     --bck-destaque: #4323fa;
     --bck-destaque-transparent: #4323fa69;
-    --bck-primary: #FF5722;
+    --bck-primary: #fc4619;
     --bck-primary-transparent: #ff56224b;
     --bck-secondary: #000;
     --bck-shadow: #ebecec;
-    --color-primary: #FF5722;
+    --color-primary: #fc4619;
     --color-secondary: #4323fa;
     --bck-light: #fff;
     --color-light: #fff;
@@ -25,20 +25,11 @@
 
 :root{
     --shadow-color: 0deg 100% 5%;
-    --shadow-elevation-low: #6418008e 0px 8px 30px -10px;
+    --shadow-elevation-low: #941e00 0px 8px 30px -10px;
       /* 0.2px .7px 5px hsl(var(--shadow-color) / 0.34),
       0.2px .5px 5px -1px hsl(var(--shadow-color) / 0.34),
       1px 5px 8px -1.5px hsl(var(--shadow-color) / 0.34); */
 }
-
-@font-face {
-    font-family: "Inter";
-    src:
-    local("Inter"),
-    url("/fonts/inter/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
-    font-display: swap;
-}
-
 @font-face {
     font-family: "Poppins";
     src:
@@ -48,7 +39,6 @@
     url("/fonts/poppins/Poppins-Bold.ttf") format("truetype");
     font-display: swap;
 }
-
 @font-face {
     font-family: "Rubik";
     src:
@@ -86,18 +76,17 @@ body {
     background-color: #ffffff;
     font-variant-ligatures: contextual;
 }
-h1,h2,h3{
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-p,label,button,::before{
+h1,h2,h3,a,label,button,::before{
     font-family: 'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-main{
-    padding: 1rem;
 }
 a{
     text-decoration: none;
-    font-family: 'Rubik';
+}
+p,input{
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+main{
+    padding: 1rem;
 }
 .background-fixed-image {
     position: absolute;
@@ -107,7 +96,8 @@ a{
     clip-path: inset(0);
     overflow: hidden;
     z-index: -1;
-    background-image: var(--bck-gradient);
+    background: linear-gradient(170deg, #ff3806, var(--bck-primary));
+    background-blend-mode: luminosity;
 
     & img {
        min-width: 100%;
@@ -115,7 +105,7 @@ a{
        object-fit: cover;
        position: fixed;
        inset: 0;
-       filter: opacity(.6) brightness(70%) contrast(130%) saturate(150%);
+       filter: opacity(.4) brightness(50%) contrast(130%) saturate(150%);
     }
 }
 .button-whatsapp{

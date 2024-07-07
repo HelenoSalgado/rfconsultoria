@@ -15,12 +15,13 @@ footer {
 
                 & a {
                     display: flex;
+                    gap: .5rem;
                     margin: .5rem 0;
                     align-items: center;
-                    gap: .5rem;
                     color: var(--color-primary);
 
                     & svg {
+                        flex: 0 0 24px;
                         width: 27px;
                         height: 27px;
                         fill: var(--bck-primary);

@@ -9,9 +9,9 @@
             <h3>Contato</h3>
             <address class="contact">
                 <NuxtLink href="tel:+5562996909812"><LazyIconsPhone />(62) 996909812</NuxtLink>
-                <NuxtLink href="mailto:rogerio@gmail.com"><LazyIconsEmail />rogerio@gmail.com</NuxtLink>
-                <NuxtLink href="#"><LazyIconsMap />
-                    Mozilla Foundation, 1981 Landings Drive, CA 94043-0801 USA
+                <NuxtLink href="mailto:rogerio@gmail.com"><LazyIconsEmail />contato@rfconsultoria.com.br</NuxtLink>
+                <NuxtLink href="http://maps.google.com/?q=Rua Duque de Caxias, 41 - Parque Real de Goiânia, Aparecida de Goiânia - GO, 74910-110" target="_blanck"><LazyIconsMap/>
+                    Rua Duque de Caxias, Qd 41, Lt 7 - Parque Real de Goiânia, Aparecida de Goiânia - GO, 74910-110
                 </NuxtLink>
             </address>
         </div>
@@ -20,7 +20,7 @@
             <SocialMedia />
         </div>
         </div>
-        <p class="copy-writer">© RF Consultoria - Todos os direitos reservados - 2023</p>
+        <p class="copy-writer">© RF Consultoria - Todos os direitos reservados - {{ new Date().getFullYear() }}</p>
         <ButtonWhatsApp/>
     </footer>
 </template>

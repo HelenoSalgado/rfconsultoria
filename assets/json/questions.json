@@ -1,27 +1,42 @@
 [
     {
         "id": "1",
-        "question": "Como funciona a consultoria fiscal",
-        "response": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, ipsam. Fugiat rerum sequi, sit officia minus aliquid magnam odit, officiis velit nobis perspiciatis repellat sapiente laudantium facilis ipsum corrupti voluptas."
+        "question": "O que é a RF Consultoria?",
+        "response": "A RF Consultoria é uma empresa especializada em consultoria empresarial, fundada por Rogério, com o objetivo de ajudar os clientes a prosperarem através de soluções estratégicas."
     },
     {
-        "id": "1",
-        "question": "Como funciona a consultoria fiscal",
-        "response": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, ipsam. Fugiat rerum sequi, sit officia minus aliquid magnam odit, officiis velit nobis perspiciatis repellat sapiente laudantium facilis ipsum corrupti voluptas."
+        "id": "2",
+        "question": "Quais serviços a RF Consultoria oferece?",
+        "response": "Oferecemos serviços de Planejamento Orçamentário, Processos, Orçamento Pessoal e Gestão Tributária (fiscal e contábil)."
     },
     {
-        "id": "1",
-        "question": "Como funciona a consultoria fiscal",
-        "response": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, ipsam. Fugiat rerum sequi, sit officia minus aliquid magnam odit, officiis velit nobis perspiciatis repellat sapiente laudantium facilis ipsum corrupti voluptas."
+        "id": "3",
+        "question": "Como posso entrar em contato com a RF Consultoria?",
+        "response": "Você pode nos contatar pelo telefone/WhatsApp (62) 99690-9812 ou pelo e-mail contato@rfconsultoria.com.br."
     },
     {
-        "id": "1",
-        "question": "Como funciona a consultoria fiscal",
-        "response": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, ipsam. Fugiat rerum sequi, sit officia minus aliquid magnam odit, officiis velit nobis perspiciatis repellat sapiente laudantium facilis ipsum corrupti voluptas."
+        "id": "4",
+        "question": "O que é o Portal do MEI?",
+        "response": "O Portal do MEI é uma seção dedicada do nosso site onde oferecemos soluções específicas para Microempreendedores Individuais (MEI), como emissão de guias mensais, parcelamento, emissão de notas fiscais, declaração de faturamento, entre outros."
     },
     {
-        "id": "1",
-        "question": "Como funciona a consultoria fiscal",
-        "response": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, ipsam. Fugiat rerum sequi, sit officia minus aliquid magnam odit, officiis velit nobis perspiciatis repellat sapiente laudantium facilis ipsum corrupti voluptas."
+        "id": "5",
+        "question": "Como posso emitir a guia mensal (DAS) no Portal do MEI?",
+        "response": "Você pode emitir a guia mensal (DAS) através de um link externo disponível na seção &quot;Guia Mensal (DAS)&quot; do Portal do MEI."
+    },
+    {
+        "id": "6",
+        "question": "O que é necessário para solicitar a baixa do CNPJ MEI?",
+        "response": "Para solicitar a baixa do CNPJ MEI, você pode acessar a seção específica no nosso blog onde fornecemos um passo a passo detalhado."
+    },
+    {
+        "id": "7",
+        "question": "Quais conteúdos estão disponíveis no blog da RF Consultoria?",
+        "response": "Nosso blog oferece uma variedade de conteúdos, incluindo informações para MEI, IPI, ICMS, PIS, COFINS, DIFAL, entre outros tópicos fiscais e contábeis."
+    },
+    {
+        "id": "8",
+        "question": "A RF Consultoria oferece suporte para parcelamento de débitos do MEI?",
+        "response": "Sim, oferecemos suporte para parcelamento de débitos do MEI. Você pode acessar essa solução através do link externo na seção \"Parcelamento\"; no Portal do MEI, ou entrar em contato pelo nosso telefone/WhatsApp (62) 99690-9812."
     }
 ]

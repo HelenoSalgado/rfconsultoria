@@ -1,12 +1,9 @@
 <template>
     <div class="social-media">
-    <NuxtLink>
+    <NuxtLink href="https://www.instagram.com/r.f.consultoria/">
         <LazyIconsInstagram/>
     </NuxtLink>
-    <NuxtLink>
-       <LazyIconsLinkedin/>
-    </NuxtLink>
-    <NuxtLink>
+    <NuxtLink href="https://www.youtube.com/@rf.consultoria">
         <LazyIconsYoutube/>
     </NuxtLink>
 </div>

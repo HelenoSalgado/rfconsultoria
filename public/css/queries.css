@@ -65,7 +65,7 @@
         right: 0;
     }
 
-    .slides-container{
-        margin-top: -3rem;
+    .values-container, .services-container{
+        padding: 1rem 2rem;
     }
 }
