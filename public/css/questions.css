@@ -11,7 +11,7 @@
     & h2{
         font-size: clamp(1rem,10vw,4rem);
         max-width: 370px;
-        background-image: linear-gradient(var(--bck-primary), #ff2600);
+        background-image: linear-gradient(var(--bck-primary), #ff4111);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -39,7 +39,7 @@
                 gap: .5rem;
                 cursor: pointer;
                 padding: 0 30px 0 1rem;
-                background-image: linear-gradient(var(--bck-primary), #ff2600);
+                background-image: linear-gradient(var(--bck-primary), #ff4111);
                 background-blend-mode: luminosity;
 
                 & h3{
