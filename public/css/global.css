@@ -5,7 +5,7 @@
     --bck-primary-transparent: #ff56224b;
     --bck-secondary: #000;
     --bck-shadow: #ebecec;
-    --color-primary: hsl(14, 99%, 56%);
+    --color-primary: hsl(14, 98%, 53%);
     --color-secondary: #4323fa;
     --bck-light: #fff;
     --color-light: #fff;
@@ -25,8 +25,8 @@
 }
 
 :root{
-    --shadow-color: 0deg 100% 5%;
-    --shadow-elevation-low: #941e00 0px 8px 30px -10px;
+    /* --shadow-color: #941e00; */
+    --shadow-elevation-low: #ff55216e 0px 8px 30px -10px;
       /* 0.2px .7px 5px hsl(var(--shadow-color) / 0.34),
       0.2px .5px 5px -1px hsl(var(--shadow-color) / 0.34),
       1px 5px 8px -1.5px hsl(var(--shadow-color) / 0.34); */
@@ -106,7 +106,7 @@ main{
        object-fit: cover;
        position: fixed;
        inset: 0;
-       filter: opacity(.4) brightness(50%) contrast(130%) saturate(150%);
+       filter: opacity(.3) brightness(40%) contrast(150%);
     }
 }
 .button-whatsapp{
