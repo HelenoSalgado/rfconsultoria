@@ -41,10 +41,20 @@ listExtend.addEventListener('click', () => {
 });
 
 // Extend reponse in question
-document.querySelectorAll('.question-header').forEach((element, key) => {
+document.querySelectorAll('.question-header').forEach((element, i) => {
     element.addEventListener('click', () => {
-        document.querySelectorAll('.response')[key].classList.toggle('response-visible');
-        document.querySelectorAll('.question-plus')[key].classList.toggle('plus-hidden');
-        document.querySelectorAll('.question-minus')[key].classList.toggle('minus-visible');
-    })
+
+        let height = document.querySelectorAll('.response > p')[i].clientHeight;
+        // Set variable css value
+        document.querySelector(':root').style.setProperty('--response-height', `calc(${height}px + 2rem)`);
+
+        document.querySelectorAll('.question-btn').forEach((element, iBtn) => {
+            if(i != iBtn) element.classList.remove('question-btn-extend');
+        });
+        document.querySelectorAll('.response').forEach((element, key) => {
+            if(i == key) return element.classList.toggle('response-height');
+            element.classList.remove('response-height');
+        });
+        document.querySelectorAll('.question-btn')[i].classList.toggle('question-btn-extend');
+    });
 });

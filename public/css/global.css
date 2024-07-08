@@ -21,6 +21,7 @@
         linear-gradient(300deg, #ff480079, #ff480046 70.71%),
         linear-gradient(360deg, #ff480079, #ff3300 70.71%);
     --transition: 200ms all;
+    --response-height: 0px;
 }
 
 :root{

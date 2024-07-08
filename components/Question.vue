@@ -4,7 +4,10 @@ defineProps(['question', 'response'])
 <template>
     <div class="question">
         <div class="question-header">
-           <h3>{{ question }}</h3><IconsPlus class="question-plus"/> <IconsMinus class="question-minus"/> 
+           <h3>{{ question }}</h3>
+           <span class="question-btn">
+            <IconsPlus class="plus"/><IconsMinus class="minus"/> 
+           </span>
         </div>
         <div class="response">
             <p>{{ response }}</p>
