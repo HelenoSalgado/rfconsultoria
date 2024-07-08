@@ -24,7 +24,7 @@
         flex: 1 0 250px;
         height: 100vh;
         overflow-anchor: hidden;
-
+        
         & .question{
             color: var(--color-light);
             margin: 1.5rem 0;

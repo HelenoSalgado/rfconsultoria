@@ -68,4 +68,10 @@
     .values-container, .services-container{
         padding: 1rem 2rem;
     }
+
+    .container-questions{
+        & > div{
+            height: auto;
+        }
+    }
 }
