@@ -1,11 +1,11 @@
 :root{
     --bck-destaque: #4323fa;
     --bck-destaque-transparent: #4323fa69;
-    --bck-primary: #ff3705;
+    --bck-primary: hsl(14, 99%, 56%);
     --bck-primary-transparent: #ff56224b;
     --bck-secondary: #000;
     --bck-shadow: #ebecec;
-    --color-primary: #ff3705;
+    --color-primary: hsl(14, 99%, 56%);
     --color-secondary: #4323fa;
     --bck-light: #fff;
     --color-light: #fff;

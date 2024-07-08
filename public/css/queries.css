@@ -71,7 +71,7 @@
 
     .container-questions{
         & > div{
-            height: auto;
+            height: auto !important;
         }
     }
 }
