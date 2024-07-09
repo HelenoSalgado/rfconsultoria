@@ -12,6 +12,8 @@ useHead({
 });
 
 useSeoMeta({
+  title: `${title.value}`,
+  description: `${route.meta.description}`,
   ogTitle: `${title.value}`,
   ogDescription: `${route.meta.description}`,
   ogImage: `${pub.site.url + route.meta.ogImage}`,
