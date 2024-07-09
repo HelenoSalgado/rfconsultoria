@@ -1,4 +1,5 @@
 footer {
+    position: relative;
     color: var(--color-primary);
 
     & .info-container {
@@ -7,6 +8,10 @@ footer {
         flex-wrap: wrap;
         column-gap: 3rem;
         padding: 2rem 1rem 4rem 1rem;
+
+        & p{
+            font-size: .9rem;
+        }
 
         & div {
             flex-basis: 300px;
@@ -31,8 +36,23 @@ footer {
             }
         }
     }
-
-    .copy-writer {
+    & .copy-writer {
         text-align: center;
+        margin: 0;
+        padding-bottom: 1rem;
     }
+
+    /* & .logo {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        left: 50%;
+        bottom: 5rem;
+        transform: translateX(-50%);
+        background-color: var(--bck-primary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
 }

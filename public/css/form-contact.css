@@ -1,16 +1,16 @@
 .contact-container {
+    margin-top: -3px;
     position: relative;
     display: grid;
     grid-template-columns: auto;
 
     & h2 {
         font-size: 2rem;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 3rem;
         color: var(--color-light);
-        width: fit-content;
-        padding: .7rem 2rem;
-        margin: 0 auto 3rem auto;
         text-shadow: 2px 1px 3px var(--bck-primary);
-        border-radius: var(--border-radius);
     }
 
     & form {
@@ -43,7 +43,6 @@
             border-radius: 15px;
             color: var(--color-primary);
             transition: 200ms ease-in;
-            
         }
 
         & input:focus,

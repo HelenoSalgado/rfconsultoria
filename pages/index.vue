@@ -51,13 +51,23 @@ useSeoMeta({
             />
         </div>
     </section>
-    <LazyDivisionTop fill="var(--bck-shadow)"/>
+    <DivisionTop fill="var(--bck-shadow)"/>
+    <section class="posts-preview-container" id="blog">
+        <h2>Nosso Blog</h2>
+        <div class="posts-preview-grid">
+            <BlogPostPreview v-for="{ id, title, src } in services" :key="id"
+            :title
+            :src
+            />
+        </div>
+    </section>
+    <DivisionBottom fill="var(--bck-shadow)"/>
     <section class="partner-container">
         <h3>Seja nosso parceiro</h3>
         <p>Se você está procurando uma empresa de consultoria empresarial que possa ajudá-lo a alcançar o sucesso, entre em contato conosco. Será um prazer conhecê-lo e discutir como podemos ajudá-lo a alcançar seus objetivos.
         </p>
     </section>
-    <LazyDivisionBottom fill="var(--bck-shadow)"/>
+    <LazyDivisionTop fill="var(--bck-shadow)"/>
     <section class="container-questions">
         <h2>Perguntas Frequentes</h2>
         <div>
@@ -68,7 +78,7 @@ useSeoMeta({
        </div>
     </section>
     <section class="contact-container">
-       <LazyDivisionBottom fill="var(--bck-light)"/>
+       <LazyDivisionBottom fill="var(--bck-shadow)"/>
         <FormContact />
         <div class="background-fixed-image">
            <NuxtImg format="webp" loading="lazy" src="/img/finance.jpg" alt="Escritório"></NuxtImg>

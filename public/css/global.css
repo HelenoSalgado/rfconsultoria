@@ -25,11 +25,16 @@
 }
 
 :root{
-    /* --shadow-color: #941e00; */
-    --shadow-elevation-low: #ff55216e 0px 8px 30px -10px;
-      /* 0.2px .7px 5px hsl(var(--shadow-color) / 0.34),
-      0.2px .5px 5px -1px hsl(var(--shadow-color) / 0.34),
-      1px 5px 8px -1.5px hsl(var(--shadow-color) / 0.34); */
+    --shadow-color: 283deg 7% 58%;
+    --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 @font-face {
     font-family: "Poppins";
@@ -59,6 +64,7 @@ html {
 
 ::-webkit-scrollbar-track {
     background: var(--bck-shadow);
+    margin-top: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -97,7 +103,7 @@ main{
     clip-path: inset(0);
     overflow: hidden;
     z-index: -1;
-    background: linear-gradient(170deg, #ff4111, var(--bck-primary));
+    background: linear-gradient(170deg, #fc471aee, var(--bck-primary));
     background-blend-mode: luminosity;
 
     & img {
@@ -106,12 +112,12 @@ main{
        object-fit: cover;
        position: fixed;
        inset: 0;
-       filter: opacity(.3) brightness(40%) contrast(150%);
+       filter: opacity(.7) brightness(40%) contrast(150%);
     }
 }
 .button-whatsapp{
     position: fixed;
-    bottom: 20px;
+    bottom: 1rem;
     right: 10px;
     z-index: 2;
     cursor: pointer;
@@ -153,7 +159,41 @@ main{
     right: -50px;
     opacity: 10;
 }
+.arrow-top{
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-primary);
+    border-radius: 50% 50% 0 0;
 
+    & svg{
+        width: 35px;
+    }
+
+    /* &::before, &::after{
+        position: absolute;
+        content: '';
+        width: 50%;
+        height: 2px;
+        background-color: var(--bck-primary);
+        top: 7px;
+        box-shadow: 1px 1px 5px #000;
+    }
+
+    &::before{
+        left: 49%;
+        transform: rotateZ(15deg);
+    }
+
+    &::after{
+        right: 49%;
+        transform: rotateZ(-15deg);
+    } */
+}
 .social-media {
     display: inline-flex;
     column-gap: 1rem;

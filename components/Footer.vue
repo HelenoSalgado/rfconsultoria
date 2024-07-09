@@ -3,7 +3,7 @@
         <div class="info-container">
             <div>
             <h3>Política de privacidade</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia culpa ducimus, optio mollitia eius et nostrum animi, adipisci porro quaerat cupiditate distinctio at similique, esse aliquam expedita! Alias, quod modi.</p>
+            <p>Nossa Política de Privacidade detalha como coletamos, usamos, armazenamos e protegemos suas informações pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD) e outras legislações pertinentes (<a href="http://" target="_blank" rel="noopener noreferrer">Saiba mais</a>).</p>
         </div>
         <div>
             <h3>Contato</h3>
@@ -21,6 +21,10 @@
         </div>
         </div>
         <p class="copy-writer">© RF Consultoria - Todos os direitos reservados - {{ new Date().getFullYear() }}</p>
+        <a class="arrow-top" href="#">
+            <IconsRefreshCw/>
+            voltar ao top
+        </a>
         <ButtonWhatsApp/>
     </footer>
 </template>

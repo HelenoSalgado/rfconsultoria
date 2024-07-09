@@ -19,7 +19,6 @@
             font-size: clamp(1rem,10vw,4rem);
             font-variant-ligatures: additional-ligatures;
             text-transform: uppercase;
-            text-shadow: 1px 1px 3px #0000008f;
         }
 
         & p{
@@ -27,7 +26,6 @@
             max-width: 500px;
             font-family: "Poppins", sans-serif;
             font-weight: lighter;
-            text-shadow: 1px 1px 3px #0000008f;
         }
 
         & a {

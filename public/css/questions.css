@@ -1,34 +1,27 @@
 .container-questions{
-    max-width: 1200px;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     gap: 2rem;
-    padding: 1rem;
+    background-color: var(--bck-shadow);
 
     & h2{
         font-size: clamp(1rem,10vw,4rem);
         max-width: 370px;
-        background-image: linear-gradient(var(--bck-primary), #ff4111);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
         flex: 1 0 250px;
-        margin: 0;
     }
 
     & > div{
         max-width: 600px;
         flex: 1 0 250px;
-        height: 100vh;
+        height: 110vh;
         overflow-anchor: hidden;
         
         & .question{
             color: var(--color-light);
             margin: 1.5rem 0;
-            box-shadow: var(--shadow-elevation-low);
+            box-shadow: var(--shadow-elevation-medium);
             border-radius: 15px;
             overflow: hidden;
 
