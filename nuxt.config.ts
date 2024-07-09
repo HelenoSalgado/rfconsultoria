@@ -2,6 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
+  runtimeConfig: {
+    public: {
+      site: {
+        url: process.env.BASE_URL
+      }
+    }
+  },
+
   nitro: {
     output: { publicDir: 'dist' },
     prerender: { failOnError: false, crawlLinks: true },
