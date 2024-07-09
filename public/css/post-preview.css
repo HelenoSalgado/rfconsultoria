@@ -3,7 +3,6 @@
     background-color: var(--bck-shadow);
 
     & .posts-preview-grid{
-        padding: 1rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -15,7 +14,7 @@
             position: relative;
             background-color: var(--bck-primary);
             width: 100%;
-            flex: 1 0 400px;
+            flex: 1 0 320px;
             min-height: 200px;
             border-radius: 15px;
             box-shadow: var(--shadow-elevation-low);
