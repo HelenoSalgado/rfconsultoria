@@ -15,11 +15,13 @@ useSeoMeta({
   ogTitle: `${title.value}`,
   ogDescription: `${route.meta.description}`,
   ogImage: `${pub.site.url + route.meta.ogImage}`,
-  twitterTitle: `${title.value}`,
   author: 'Heleno Salgado',
   ogLocale: 'pt-BR',
   ogUrl: `${pub.site.url + route.path}`,
+  twitterTitle: `${title.value}`,
+  twitterDescription: `${route.meta.description}`,
   twitterCard: 'summary_large_image',
+  twitterImage: `${pub.site.url + route.meta.ogImage}`,
   twitterCreator: '@HelenoSalgado'
 });
 
