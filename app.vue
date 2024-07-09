@@ -13,6 +13,7 @@ useHead({
 
 useSeoMeta({
   ogTitle: `${title.value}`,
+  ogDescription: `${route.meta.description}`,
   ogImage: `${pub.site.url + route.meta.ogImage}`,
   twitterTitle: `${title.value}`,
   author: 'Heleno Salgado',

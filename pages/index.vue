@@ -11,11 +11,11 @@ useHead({
         }
     ]
 });
-useSeoMeta({
-    description: 'Somos a RF Consultoria, uma empresa fundada por Rogério, com a visão de ajudar os seus clientes a prosperarem.',
-    ogDescription: 'Somos a RF Consultoria, uma empresa fundada por Rogério, com a visão de ajudar os seus clientes a prosperarem.',
+definePageMeta({ 
+    title: 'Home', 
+    ogImage: '/img/logo.png',
+    description: 'Somos a RF Consultoria, uma empresa fundada por Rogério, com a visão de ajudar os seus clientes a prosperarem.'
 });
-definePageMeta({ title: 'Home', ogImage: '/img/logo.png' });
 </script>
 <template>
     <section class="slides-container">
